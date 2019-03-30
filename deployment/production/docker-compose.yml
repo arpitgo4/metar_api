@@ -1,0 +1,33 @@
+
+
+version: "3"
+
+services:
+  redis:
+    container_name: metar-redis
+    image: redis:5.0.3-alpine
+    restart: unless-stopped
+    ports: 
+      - 6379:6379
+    
+  server: 
+    container_name: metar-server
+    build: ../../server
+    restart: unless-stopped
+    expose:
+      - 8080
+    depends_on:
+      - redis
+      - api_gateway
+    environment:
+      - SERVER_PORT=8080
+      - NODE_ENV=production
+      - REDIS_HOST=redis:6379
+      - API_GATEWAY=localhost
+      
+  api_gateway:
+    container_name: metar-api-gateway
+    build: ./api-gateway
+    restart: unless-stopped
+    ports:
+      - 80:80

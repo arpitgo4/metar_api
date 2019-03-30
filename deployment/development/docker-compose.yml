@@ -1,0 +1,37 @@
+
+
+version: "3"
+
+services:
+  redis:
+    container_name: metar-redis
+    image: redis:5.0.3-alpine
+    restart: unless-stopped
+    ports: 
+      - 6379:6379
+    
+  server: 
+    container_name: metar-server
+    image: arpitgo4/alpine-node
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    volumes:
+      - ../../server:/usr/src/app
+    command: sh -c "npm install && npm run start:development"
+    expose:
+      - 8080
+    depends_on:
+      - redis
+      - api_gateway
+    environment:
+      - SERVER_PORT=8080
+      - NODE_ENV=development
+      - REDIS_HOST=redis:6379
+      - API_GATEWAY=localhost
+
+  api_gateway:
+    container_name: metar-api-gateway
+    build: ../../api-gateway
+    restart: unless-stopped
+    ports:
+      - 80:80
