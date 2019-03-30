@@ -11,4 +11,5 @@ export interface IMetarModel {
     sky_visibility: string;
     temperature: string;
     pressure: string;
+    timestamp: number;
 }

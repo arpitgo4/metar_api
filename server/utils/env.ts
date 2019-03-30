@@ -1,10 +1,13 @@
 
 import chalk from 'chalk';
+
+// @ts-ignore
 import { IEnv } from 'Interfaces';
 
 const environment_dependencies = [
     'SERVER_PORT',
     'REDIS_HOST',
+    'REDIS_METAR_EXPIRY',
     'API_GATEWAY',
 ];
 
