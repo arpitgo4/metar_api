@@ -27,6 +27,7 @@ services:
       - SERVER_PORT=8080
       - NODE_ENV=development
       - REDIS_HOST=redis:6379
+      - REDIS_METAR_EXPIRY=5
       - API_GATEWAY=localhost
 
   api_gateway:
