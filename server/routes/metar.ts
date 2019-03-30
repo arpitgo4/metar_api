@@ -24,7 +24,7 @@ router.get('/info', (req: Request, res: Response, next: NextFunction) => {
         res.status(200).json({
             data: {
                 type: 'metar',
-                id: 'metar',
+                id: metar.station_code,
                 attributes: metar,
             }
         });

@@ -1,22 +1,14 @@
 
 
 export interface IMetarModel {
-    urlh: string;
-    statu: number;
-    brand: string;
-    category: string;
-    subcategory: string;
-    product_type: string;
-    sku: string; 
-    title: string;
-    thumbnail: string;
-    url: string;
-    source: string;
-    seller: string;
-    crawl_date: string;
-    crawl_time: string;
-    mrp: number;
-    available_price: number;
-    discount: number;
-    stock: string;
+    last_observation_date: string;
+    last_observation_time: string;
+    station_code: string;
+    date_time_zulu: string;
+    report_status: string;
+    wind_direction_velocity: string;
+    visibility: string;
+    sky_visibility: string;
+    temperature: string;
+    pressure: string;
 }
