@@ -6,9 +6,9 @@
  * the request goes here.
  */
 
-import * as productCtrl from './product';
+import * as metarCtrl from './metar';
 
 
 export {
-    productCtrl,
+    metarCtrl,
 };

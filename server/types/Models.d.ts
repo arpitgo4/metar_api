@@ -1,6 +1,6 @@
 
 
-export interface IProductModel {
+export interface IMetarModel {
     urlh: string;
     statu: number;
     brand: string;
