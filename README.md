@@ -18,14 +18,11 @@ Metar API with redis cache for fast and reliable metar weather data.
 ```
 ## Postman api collection
 https://documenter.getpostman.com/view/401954/S17wP6VP
-
 ```
 
 ## Environment Variables
 ```
-
 ## Environment variables are defined in the deployment/[production/development]/docker-compose.yml
-
 ## Environment variables are needed for successfull startup of the server
 
 SERVER_PORT=8080                        # Port number for server to listen
@@ -37,7 +34,7 @@ API_GATEWAY=api_gateway                 # Api gateway service domain name
 
 
 ## Development
-```	
+```
 # Start project in development mode with hot code loading,
 cd deployment/development && docker-compose up --build [-d]
 
