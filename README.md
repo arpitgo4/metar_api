@@ -1,7 +1,7 @@
 
 
-# Node-React-Scaffold [![Build Status](https://travis-ci.org/arpitgo4/React-Redux-Scaffold.svg?branch=master)](https://travis-ci.org/arpitgo4/React-Redux-Scaffold)
-Full stack javascript scaffold with MongoDB-Express-React-Node (MERN). Scaffold supports production and development modes, with **Best Developer Experience** ( DX ) by Hot-Reloading for the server side and client side changes. Docker, Typescript and production best practices are all baked in. Deployment script are provided for development and production environments with Docker-Compose and Kubernetes respectively.
+# Metar API
+Metar API with redis cache for fast and reliable metar weather data.
 
 ## Scaffold Structure
 
