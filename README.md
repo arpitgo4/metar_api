@@ -3,14 +3,15 @@
 # Metar API
 Metar API with redis cache for fast and reliable metar weather data.
 
-## Scaffold Structure
+## Project Structure
 
 ```
         .
         ├── api-gateway                 #  Nginx Api Gateway
-        ├── deployment                  #  Deployment config
+        ├── deployment
         |   ├── development             #  Docker-compose development config
-        |   └── production              #  Kubernetes production config
+        |   └── production              #  Docker-compose production config
+        ├── server                      #  Api Server
         └── README.md                   #  This file
 ```
 
